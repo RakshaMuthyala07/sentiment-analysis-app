@@ -1,5 +1,6 @@
 🎭 Sentiment Analysis Web Application
 
+LIVE DEMO: https://sentiment-analysis-app-kwnrl82u5qwz4axes2jjtv.streamlit.app/
 
 
 !\[Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
@@ -44,12 +45,6 @@ Text Statistics: View detailed metrics about your input
 
 Export Results: Download analysis results as CSV
 
-
-
-
-
-
-\*Live Demo: \[Your Deployed App Link]\*
 
 
 
@@ -243,7 +238,7 @@ Authors
 
 Mythri Muthyala
 Raksha Muthyala
-
+GitHub:https://github.com/MythriMuthyala
 GitHub: https://github.com/RakshaMuthyala07
 
 Acknowledgments
