@@ -47,10 +47,7 @@ data/*.json
 data/*.txt
 !data/sample_reviews.csv
 
-# Model files (can be large)
-#models/*.pkl
-models/*.h5
-models/*.pt
+
 
 # Keep folder structure
 !models/.gitkeep
