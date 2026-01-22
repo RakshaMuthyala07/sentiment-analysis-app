@@ -1,4 +1,4 @@
-\# 🎭 Sentiment Analysis Web Application
+🎭 Sentiment Analysis Web Application
 
 
 
@@ -15,26 +15,25 @@
 A machine learning web application that analyzes sentiment in text reviews using Natural Language Processing (NLP) and provides real-time predictions with confidence scores.
 
 
-
-\## 🌟 Features
-
-
-
-\- \*\*Real-time Sentiment Analysis\*\*: Analyze text instantly with high accuracy
-
-\- \*\*Batch Processing\*\*: Upload CSV files to analyze multiple reviews at once
-
-\- \*\*Interactive Dashboard\*\*: Beautiful visualizations with Plotly
-
-\- \*\*Confidence Scores\*\*: Get probability distributions for predictions
-
-\- \*\*Text Statistics\*\*: View detailed metrics about your input
-
-\- \*\*Export Results\*\*: Download analysis results as CSV
+🌟 Features
 
 
 
-\## 🚀 Demo
+Real-time Sentiment Analysis: Analyze text instantly with high accuracy
+
+Batch Processing: Upload CSV files to analyze multiple reviews at once
+
+Interactive Dashboard: Beautiful visualizations with Plotly
+
+Confidence Scores: Get probability distributions for predictions
+
+Text Statistics: View detailed metrics about your input
+
+Export Results: Download analysis results as CSV
+
+
+
+Demo
 
 
 
@@ -46,13 +45,12 @@ A machine learning web application that analyzes sentiment in text reviews using
 
 
 
-\## 📊 Model Performance
+ 📊 Model Performance
 
 
 
 | Model | Accuracy | Precision | Recall | F1-Score |
 
-|-------|----------|-----------|--------|----------|
 
 | Logistic Regression | 88.5% | 0.89 | 0.88 | 0.88 |
 
@@ -64,37 +62,37 @@ A machine learning web application that analyzes sentiment in text reviews using
 
 
 
-\*\*Best Model\*\*: Linear SVM with 89.1% accuracy
+Best Model: Linear SVM with 89.1% accuracy
 
 
 
-\## 🛠️ Technologies Used
+ 🛠️ Technologies Used
 
 
 
-\### Machine Learning \& NLP
+ Machine Learning & NLP
 
-\- \*\*scikit-learn\*\*: Model training and evaluation
+scikit-learn: Model training and evaluation
 
-\- \*\*NLTK\*\*: Natural language processing
+NLTK: Natural language processing
 
-\- \*\*TF-IDF\*\*: Feature extraction
-
-
-
-\### Web Development
-
-\- \*\*Streamlit\*\*: Interactive web interface
-
-\- \*\*Plotly\*\*: Data visualizations
-
-\- \*\*Pandas\*\*: Data manipulation
+TF-IDF: Feature extraction
 
 
 
-\### Dataset
+ Web Development
 
-\- \*\*IMDB Movie Reviews\*\*: 50,000 labeled reviews (25k train, 25k test)
+Streamlit: Interactive web interface
+
+Plotly: Data visualizations
+
+Pandas: Data manipulation
+
+
+
+ Dataset
+
+IMDB Movie Reviews: 50,000 labeled reviews (25k train, 25k test)
 
 
 
@@ -132,15 +130,15 @@ sentiment-analysis-app/
 
 └── README.md
 
-```
 
 
 
-\## 🔧 Installation
+
+🔧 Installation
 
 
 
-\### Prerequisites
+Prerequisites
 
 \- Python 3.8 or higher
 
@@ -148,275 +146,113 @@ sentiment-analysis-app/
 
 
 
-\### Setup
+ Setup
 
-
-
-1\. \*\*Clone the repository\*\*
-
-```bash
-
-git clone https://github.com/yourusername/sentiment-analysis-app.git
-
+Installation
+1. Clone the repository
+git clone https://github.com/RakshaMuthyala07/sentiment-analysis-app.git
 cd sentiment-analysis-app
 
-```
-
-
-
-2\. \*\*Create a virtual environment\*\* (recommended)
-
-```bash
+2. Create and activate a virtual environment (recommended)
 
 python -m venv venv
+venv\Scripts\activate
 
-source venv/bin/activate  # On Windows: venv\\Scripts\\activate
-
-```
-
-
-
-3\. \*\*Install dependencies\*\*
-
-```bash
+3. Install dependencies
 
 pip install -r requirements.txt
 
-```
-
-
-
-4\. \*\*Download NLTK data\*\*
-
-```python
+4. Download NLTK data
 
 import nltk
-
 nltk.download('stopwords')
-
 nltk.download('wordnet')
-
 nltk.download('omw-1.4')
 
-```
+5. Train the model (if not already trained)
 
+Run the notebooks in the following order:
 
+jupyter notebook notebooks/01_data_loading_and_eda.ipynb
+jupyter notebook notebooks/02_model_training.ipynb
 
-5\. \*\*Train the model\*\* (if not already trained)
-
-```bash
-
-\# Run the notebooks in order:
-
-jupyter notebook notebooks/01\_data\_loading\_and\_eda.ipynb
-
-jupyter notebook notebooks/02\_model\_training.ipynb
-
-```
-
-
-
-\## 🎯 Usage
-
-
-
-\### Run the Web Application
-
-
-
-```bash
-
+Usage
+Run the Web Application
 streamlit run app.py
+Single Text Analysis
 
-```
+Open the "Single Analysis" tab
 
+Enter a movie review
 
+Click "Analyze Sentiment"
 
-The app will open in your browser at `http://localhost:8501`
+View sentiment prediction and confidence score
+Batch Analysis
 
+Open the "Batch Analysis" tab
 
+Upload a CSV file containing reviews
 
-\### Single Text Analysis
+Click "Analyze All Reviews"
 
+Download the results as a CSV file
 
+Model Training Process
 
-1\. Navigate to the "Single Analysis" tab
+Data collection using the IMDB movie reviews dataset
 
-2\. Enter your review text or select a sample
+Text preprocessing including HTML removal, lowercasing, tokenization, stopword removal, and lemmatization
 
-3\. Click "Analyze Sentiment"
+Feature extraction using TF-IDF vectorization with unigrams and bigrams
 
-4\. View results with confidence scores and visualizations
+Model training using multiple machine learning algorithms
 
+Model evaluation and selection based on accuracy and F1-score
 
-
-\### Batch Analysis
-
-
-
-1\. Navigate to the "Batch Analysis" tab
-
-2\. Download the sample CSV or upload your own
-
-3\. Click "Analyze All Reviews"
-
-4\. View aggregate statistics and download results
-
-
-
-\## 📈 Model Training Process
-
-
-
-1\. \*\*Data Collection\*\*: IMDB dataset with 50,000 movie reviews
-
-2\. \*\*Data Preprocessing\*\*: 
-
-&nbsp;  - Text cleaning (HTML removal, lowercase conversion)
-
-&nbsp;  - Tokenization
-
-&nbsp;  - Stopword removal
-
-&nbsp;  - Lemmatization
-
-3\. \*\*Feature Extraction\*\*: TF-IDF vectorization (5000 features, unigrams + bigrams)
-
-4\. \*\*Model Training\*\*: Tested 4 different algorithms
-
-5\. \*\*Evaluation\*\*: Best model selected based on accuracy and F1-score
-
-
-
-\## 🧪 Example Predictions
-
-
-
-```python
-
-\# Positive Review
+Example Predictions
 
 "This movie was absolutely fantastic! The acting was superb."
-
-→ Sentiment: Positive (Confidence: 94.2%)
-
-
-
-\# Negative Review
+Sentiment: Positive
 
 "Terrible waste of time. The worst movie I've ever seen."
+Sentiment: Negative
 
-→ Sentiment: Negative (Confidence: 96.8%)
+Visualizations
 
-```
+The application provides sentiment distribution charts, confidence scores, probability graphs, and text statistics.
+Word clouds and detailed analysis are available in the EDA notebook.
 
+Deployment
 
+This application can be deployed using Streamlit Community Cloud:
 
-\## 📊 Visualizations
+Push the project to GitHub
 
+Visit https://share.streamlit.io
 
+Connect the GitHub repository
 
-The app provides:
+Deploy the app
 
-\- Sentiment distribution pie charts
+License
 
-\- Confidence gauge meters
+This project is licensed under the MIT License.
+See the LICENSE file for details.
 
-\- Probability bar charts
+Authors
 
-\- Text statistics dashboards
+Mythri Muthyala
+Raksha Muthyala
 
-\- Word clouds (in EDA notebook)
+GitHub: https://github.com/RakshaMuthyala07
 
+Acknowledgments
 
+IMDB for the movie review dataset
+Streamlit for the web framework
+scikit-learn community for machine learning tools
 
-\## 🚀 Deployment
 
 
-
-\### Deploy to Streamlit Cloud (Free)
-
-
-
-1\. Push your code to GitHub
-
-2\. Go to \[share.streamlit.io](https://share.streamlit.io)
-
-3\. Connect your GitHub repository
-
-4\. Deploy with one click!
-
-
-
-\## 🤝 Contributing
-
-
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-
-
-1\. Fork the project
-
-2\. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-
-3\. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-
-4\. Push to the branch (`git push origin feature/AmazingFeature`)
-
-5\. Open a Pull Request
-
-
-
-\## 📝 License
-
-
-
-This project is licensed under the MIT License - see the \[LICENSE](LICENSE) file for details.
-
-
-
-\## 👨‍💻 Author
-
-
-
-\*\*Your Name\*\*
-
-\- GitHub: \[@yourusername](https://github.com/yourusername)
-
-\- LinkedIn: \[Your Profile](https://linkedin.com/in/yourprofile)
-
-\- Email: your.email@example.com
-
-
-
-\## 🙏 Acknowledgments
-
-
-
-\- IMDB for the movie review dataset
-
-\- Streamlit for the amazing web framework
-
-\- scikit-learn community for ML tools
-
-
-
-\## 📞 Contact
-
-
-
-For any queries or suggestions, feel free to reach out!
-
-
-
----
-
-
-
-⭐ If you found this project helpful, please consider giving it a star!
-
-
-
-\*\*Made with ❤️ and Python\*\*
 
