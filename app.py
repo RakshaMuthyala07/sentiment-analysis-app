@@ -3,15 +3,13 @@ Sentiment Analysis Web Application
 A machine learning web app for analyzing sentiment in text reviews
 Author: Mythri Muthyala & Raksha Muthyala
 """
-import nltk
-nltk.download('stopwords')
-nltk.download('wordnet')
+
 import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
 import re
-import nltk
+
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import plotly.graph_objects as go
@@ -96,19 +94,28 @@ download_nltk_data()
 # Load model and vectorizer
 @st.cache_resource
 def load_models():
-    try:
-        model = joblib.load('models/best_model.pkl')
-        vectorizer = joblib.load('models/tfidf_vectorizer.pkl')
-        return model, vectorizer
-    except FileNotFoundError:
-        st.error("⚠️ Model files not found! Please train the model first by running the training notebook.")
+    model_path = "models/best_model.pkl"
+    vectorizer_path = "models/tfidf_vectorizer.pkl"
+
+    if not os.path.exists(model_path) or not os.path.exists(vectorizer_path):
+        st.error("❌ Model or vectorizer file missing. Please upload trained files.")
         st.stop()
+
+    model = joblib.load(model_path)
+    vectorizer = joblib.load(vectorizer_path)
+
+    return model, vectorizer
 
 model, vectorizer = load_models()
 
 # Text preprocessing functions
 lemmatizer = WordNetLemmatizer()
-stop_words = set(stopwords.words('english'))
+
+@st.cache_resource
+def load_stopwords():
+    return set(stopwords.words('english'))
+
+stop_words = load_stopwords()
 
 def clean_text(text):
     """Clean and preprocess text"""
