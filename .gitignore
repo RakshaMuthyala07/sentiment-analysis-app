@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files (large datasets)
+data/*.csv
+data/*.json
+data/*.txt
+!data/sample_reviews.csv
+
+# Model files (can be large)
+models/*.pkl
+models/*.h5
+models/*.pt
+
+# Keep folder structure
+!models/.gitkeep
+!data/.gitkeep
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# Streamlit
+.streamlit/secrets.toml
