@@ -19,6 +19,14 @@ import matplotlib.pyplot as plt
 import nltk
 import streamlit as st
 
+# Page configuration
+st.set_page_config(
+    page_title="Sentiment Analysis App",
+    page_icon="🎭",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 @st.cache_resource
 def setup_nltk():
     nltk.download("stopwords", quiet=True)
@@ -29,13 +37,7 @@ setup_nltk()
 
 
 
-# Page configuration
-st.set_page_config(
-    page_title="Sentiment Analysis App",
-    page_icon="🎭",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
+
 
 # Custom CSS for better styling
 st.markdown("""
