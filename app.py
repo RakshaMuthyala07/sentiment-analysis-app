@@ -18,6 +18,19 @@ import plotly.graph_objects as go
 import plotly.express as px
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
+import nltk
+import os
+
+# Download NLTK data safely on Streamlit Cloud
+nltk_data_path = os.path.join(os.getcwd(), "nltk_data")
+nltk.data.path.append(nltk_data_path)
+
+for pkg in ["stopwords", "wordnet", "omw-1.4"]:
+    try:
+        nltk.data.find(f"corpora/{pkg}")
+    except LookupError:
+        nltk.download(pkg, download_dir=nltk_data_path)
+
 
 # Page configuration
 st.set_page_config(
