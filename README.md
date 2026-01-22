@@ -1,4 +1,4 @@
-🎭 Sentiment Analysis Web Application
+<img width="1919" height="1122" alt="image" src="https://github.com/user-attachments/assets/01f2a6b7-3bbf-426e-8bda-29741f9736e9" />🎭 Sentiment Analysis Web Application
 
 
 
@@ -14,10 +14,17 @@
 
 A machine learning web application that analyzes sentiment in text reviews using Natural Language Processing (NLP) and provides real-time predictions with confidence scores.
 
+Sentiment analysis app preview:
+<img width="1916" height="1109" alt="image" src="https://github.com/user-attachments/assets/db6a3e77-39d0-487b-9350-1186ccae0e70" />
+<img width="1470" height="448" alt="image" src="https://github.com/user-attachments/assets/19ffae7b-4181-4fc9-ade4-aa9e8d074bb5" />
+<img width="1479" height="994" alt="image" src="https://github.com/user-attachments/assets/a719d6f3-f827-4c3f-aebe-1de6b0163f74" />
+<img width="1919" height="1122" alt="image" src="https://github.com/user-attachments/assets/b5433406-7556-4079-a1f3-f417decaf1af" />
+<img width="1510" height="977" alt="image" src="https://github.com/user-attachments/assets/0885210f-ebda-443e-a68f-17d6d555fa47" />
+<img width="1473" height="676" alt="image" src="https://github.com/user-attachments/assets/158be900-b035-4048-bc34-0b500c684db7" />
+
+
 
 🌟 Features
-
-
 
 Real-time Sentiment Analysis: Analyze text instantly with high accuracy
 
