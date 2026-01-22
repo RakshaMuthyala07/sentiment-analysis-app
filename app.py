@@ -3,7 +3,9 @@ Sentiment Analysis Web Application
 A machine learning web app for analyzing sentiment in text reviews
 Author: Mythri Muthyala & Raksha Muthyala
 """
-
+import nltk
+nltk.download('stopwords')
+nltk.download('wordnet')
 import streamlit as st
 import pandas as pd
 import numpy as np
