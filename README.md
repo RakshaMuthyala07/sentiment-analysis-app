@@ -48,17 +48,8 @@ Demo
  📊 Model Performance
 
 
+<img width="989" height="336" alt="image" src="https://github.com/user-attachments/assets/f13f6118-0218-4d8e-b545-ccd3a4424d99" />
 
-| Model | Accuracy | Precision | Recall | F1-Score |
-
-
-| Logistic Regression | 88.5% | 0.89 | 0.88 | 0.88 |
-
-| Naive Bayes | 85.2% | 0.85 | 0.85 | 0.85 |
-
-| Linear SVM | 89.1% | 0.89 | 0.89 | 0.89 |
-
-| Random Forest | 84.8% | 0.85 | 0.85 | 0.85 |
 
 
 
@@ -106,23 +97,23 @@ sentiment-analysis-app/
 
 ├── app.py                          # Main Streamlit application
 
-├── notebooks/
+├── notebooks
 
-│   ├── 01\_data\_loading\_and\_eda.ipynb
+│   ├── 01_data_loading_and_eda.ipynb
 
-│   └── 02\_model\_training.ipynb
+│   └── 02_model_training.ipynb
 
-├── models/
+├── models
 
-│   ├── best\_model.pkl
+│   ├── best_model.pkl
 
-│   └── tfidf\_vectorizer.pkl
+│   └── tfidf_vectorizer.pkl
 
-├── data/
+├── data
 
-│   ├── train\_processed.csv
+│   ├── train_processed.csv
 
-│   └── test\_processed.csv
+│   └── test_processed.csv
 
 ├── requirements.txt
 
@@ -140,9 +131,9 @@ sentiment-analysis-app/
 
 Prerequisites
 
-\- Python 3.8 or higher
+ Python 3.8 or higher
 
-\- pip package manager
+ pip package manager
 
 
 
