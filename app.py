@@ -93,19 +93,29 @@ def download_nltk_data():
 download_nltk_data()
 
 # Load model and vectorizer
-@st.cache_resource
+
 def load_models():
     model_path = "models/best_model.pkl"
     vectorizer_path = "models/tfidf_vectorizer.pkl"
 
-    if not os.path.exists(model_path) or not os.path.exists(vectorizer_path):
-        st.error("❌ Model or vectorizer file missing. Please upload trained files.")
+    if not os.path.exists(model_path):
+        st.error("❌ best_model.pkl not found")
+        st.stop()
+
+    if not os.path.exists(vectorizer_path):
+        st.error("❌ tfidf_vectorizer.pkl not found")
         st.stop()
 
     model = joblib.load(model_path)
     vectorizer = joblib.load(vectorizer_path)
 
+    # HARD SAFETY CHECK
+    if not hasattr(vectorizer, "idf_"):
+        st.error("❌ TF-IDF vectorizer is NOT fitted. Cached object detected.")
+        st.stop()
+
     return model, vectorizer
+
 
 model, vectorizer = load_models()
 
